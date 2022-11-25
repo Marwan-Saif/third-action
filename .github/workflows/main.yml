@@ -12,9 +12,11 @@
       runs-on:  ubuntu-latest
       
       steps:
-        - name: 'testing github action'
-          run: pwd
+        - name: 'before'
+          run: ls
         
-        - name: 'Testing printing'
-          run: echo marwan
+        - uses: actions/checkout@v3
+
+        - name: 'after'
+          run: ls
 
